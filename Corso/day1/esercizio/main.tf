@@ -68,7 +68,7 @@ resource "local_file" "mad_libs" {
 #}
 
 data "archive_file" "mad_libs" {
-  # attendi che finisca la generazione della risorsa mad_libs (sono i 100 file)
+  # attendi che finisca la generazione della risorsa mad_libs (sono i 100 file) altrimenti parte subito (non ha oggetti)
   depends_on = [
     local_file.mad_libs
   ]
